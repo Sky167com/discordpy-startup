@@ -20,7 +20,7 @@ async def ping(ctx):
 
 @bot.command()
 async def　action(ctx):
-    await ctx.send('こんにちは')
+    await ctx.send('oh!!')
     
 bot.run(token)
                   
