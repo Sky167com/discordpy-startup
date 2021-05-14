@@ -17,13 +17,6 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('hell!')
     
-
-@bot.command()
-async def time(ctx):
-    await ctx.import datetime
-    now = datetime.datetime.now()
-    send(now)
-
     
 bot.run(token)
                   
