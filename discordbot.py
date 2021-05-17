@@ -27,6 +27,6 @@ async def time(ctx)
     await ctx.import datetime
 
 now = datetime.datetime.now()
-print(now)
+send(now)
 
 bot.run(token)                  
