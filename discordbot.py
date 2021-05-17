@@ -22,7 +22,11 @@ async def ping(ctx):
 async def hi(ctx):
     await ctx.send('hi')
 
+@bot.command()
+async def time(ctx)
+    await ctx.import datetime
 
-
+now = datetime.datetime.now()
+print(now)
 
 bot.run(token)                  
