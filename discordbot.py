@@ -23,13 +23,4 @@ async def hi(ctx):
     await ctx.send('hi')
 
     
-import datwtime
-now = datetime.datetime.now()
-
-
-@bot.command()
-async def time(ctx):
-    await ctx.send(now)
-
-    
 bot.run(token)                  
