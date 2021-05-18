@@ -22,5 +22,10 @@ async def ping(ctx):
 async def hi(ctx):
     await ctx.send('hi')
 
+
+@bot.command()
+async def say(ctx):
+    await ctx.send('?')
+    
     
 bot.run(token)                  
