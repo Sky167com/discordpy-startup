@@ -6,8 +6,6 @@ import datetime
 now = datetime.datetime.now()
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-hour = date.hour
-min = date.minute
 
 
 @bot.event
@@ -29,7 +27,7 @@ async def hi(ctx,name):
     
 @bot.command()
 async def time(ctx):
-    await ctx.send(now : hour : min)
+    await ctx.send(now)
     
     
 bot.run(token)                  
