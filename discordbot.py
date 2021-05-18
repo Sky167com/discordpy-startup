@@ -1,7 +1,9 @@
 from discord.ext import commands
 import os
 import traceback
+import datetime
 
+now = datetime.datetime.now()
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
@@ -24,8 +26,8 @@ async def hi(ctx,name):
 
     
 @bot.command()
-async def say(ctx):
-    await ctx.send('?')
+async def time(ctx):
+    await ctx.print(now)
     
     
 bot.run(token)                  
