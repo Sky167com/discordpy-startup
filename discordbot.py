@@ -32,7 +32,7 @@ async def on_message(message):
     if message.content == '何分？':
         await message.channel.send(str(min) + '分です。')
     if message.content == '何時何分？':
-        await message.channel.send(str(hour) + '時' + str(min) + '分です。')@bot.command()
+        await message.channel.send(str(hour) + '時' + str(min) + '分です。')
 
 
 @bot.command()        
