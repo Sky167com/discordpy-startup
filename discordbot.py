@@ -15,7 +15,24 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
 
-@bot.command()
+@bot.event
+async def on_ready():
+    print('時報機が起動しました。')
+
+
+@bot.event
+async def on_message(message):
+    if message.author.bot:
+        return
+    if message.content == '何時？':
+        await message.channel.send(str(hour) + '時です。')
+    if message.content == '何分？':
+        await message.channel.send(str(min) + '分です。')
+    if message.content == '何時何分？':
+        await message.channel.send(str(hour) + '時' + str(min) + '分です。')@bot.command()
+
+
+@bot.command()        
 async def ping(ctx):
     await ctx.send('hello!')
 
