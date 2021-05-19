@@ -26,8 +26,7 @@ async def hi(ctx,name):
     
 @bot.command()
 async def time(ctx):
-    await import (now)
-    ctx.send(now)
+    await ctx.send(now)
     
     
 bot.run(token)                  
