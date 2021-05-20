@@ -4,9 +4,9 @@ import traceback
 import datetime
 
 
-now = datetime.datetime.now()
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
+tokyo_tz = datetime.timezone(datetime.timedelta(hours=9))
 
 
 @bot.event
@@ -28,7 +28,7 @@ async def hi(ctx,name):
     
 @bot.command()
 async def time(ctx):
-    await ctx.send(now)
+    await ctx.send(tokyo_tz)
     
     
 bot.run(token)                  
