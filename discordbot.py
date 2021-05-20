@@ -28,7 +28,7 @@ async def hi(ctx,name):
     
 @bot.command()
 async def time(ctx):
-    await ctx.send(tokyo_tz)
+    await ctx.send(datetime.datetime.now(tokyo_tz))
     
     
 bot.run(token)                  
