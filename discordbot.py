@@ -22,7 +22,7 @@ async def ping(ctx):
 
 
 @bot.command()
-async def hi(ctx,name):
+async def hi(ctx):
     await ctx.send('こんにちは')
 
     
