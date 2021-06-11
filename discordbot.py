@@ -27,7 +27,7 @@ async def hi(ctx):
 
     
 @bot.command()
-async def time(ctx):
+async def 時間(ctx):
     await ctx.send(datetime.datetime.now(tokyo_tz))
     
     
