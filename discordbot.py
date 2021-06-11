@@ -22,6 +22,11 @@ async def ping(ctx):
 
 
 @bot.command()
+async def 何時(ctx):
+    await ctx.send(datetime.datetime.now)
+
+
+@bot.command()
 async def hi(ctx):
     await ctx.send('こんにちは')
 
