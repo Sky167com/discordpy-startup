@@ -33,7 +33,7 @@ async def hi(ctx):
     
 @bot.command()
 async def 時間(ctx):
-    await ctx.send('今は'+datetime.datetime.now(tokyo_tz))
+    await ctx.send('今は'+str(datetime.datetime.now(tokyo_tz)))
     
     
 bot.run(token)                  
