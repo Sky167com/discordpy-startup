@@ -15,10 +15,7 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
-@bot.event
-async def on_message(message):
-    if client.user in message.mentions: # 話しかけられたかの判定
-        await reply(message) # 返信する非同期関数を実行
+
 
 @bot.command()        
 async def ping(ctx):
@@ -39,11 +36,6 @@ async def hi(ctx):
 async def 時間(ctx):
     await ctx.send('今は'+str(datetime.datetime.now(tokyo_tz))+'です。')
 #ヒントを作る    
-@bot.command()
-# 返信する非同期関数を定義
-async def reply(message):
-    reply = f'{message.author.mention} 呼んだ？' # 返信メッセージの作成
-    await message.channel.send(reply) # 返信メッセージを送信
 
 
 
