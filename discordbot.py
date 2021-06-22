@@ -15,6 +15,10 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
+@bot.event
+async def on_message(message):
+    if client.user in message.mentions: # 話しかけられたかの判定
+        await reply(message) # 返信する非同期関数を実行
 
 @bot.command()        
 async def ping(ctx):
