@@ -7,6 +7,8 @@ import datetime
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 tokyo_tz = datetime.timezone(datetime.timedelta(hours=9))
+date = datetime.datetime.now(tokyo_tz)
+hour = date.hour
 
 
 @bot.event
@@ -39,7 +41,7 @@ async def ping(ctx):
 
 @bot.command()
 async def 何時(ctx):
-    await ctx.send(datetime.datetime.now)
+    await ctx.send(str(datetime.datetime.now))
 
 
 @bot.command()
@@ -51,7 +53,9 @@ async def hi(ctx):
 async def 時間(ctx):
     await ctx.send('今は'+str(datetime.datetime.now(tokyo_tz))+'です。')
 #ヒントを作る    
-
+@bot.command()
+async def hour(ctx):
+    await ctx.send(str(hour))
 
 
 bot.run(token)                  
