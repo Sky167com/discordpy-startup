@@ -55,7 +55,7 @@ async def 時間(ctx):
 #ヒントを作る    
 @bot.command()
 async def hour(ctx):
-    await ctx.send(str(hour))
+    await ctx.send(hour)
 
 
 bot.run(token)                  
