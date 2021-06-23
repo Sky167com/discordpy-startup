@@ -19,7 +19,7 @@ async def on_command_error(ctx, error):
 @bot.event
 async def on_ready():
     # 起動したらターミナルにログイン通知が表示される
-    send('ログインしました')
+    await ctx.send('ログインしました')
     
 @bot.command()# 返信する非同期関数を定義
 async def reply(message):
