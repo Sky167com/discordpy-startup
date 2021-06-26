@@ -9,7 +9,6 @@ token = os.environ['DISCORD_BOT_TOKEN']
 tokyo_tz = datetime.timezone(datetime.timedelta(hours=9))
 
 
-
 @bot.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
@@ -17,10 +16,6 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
     
-
-    
-
-
 @bot.command()        
 async def ping(ctx):
     await ctx.send('hello!')
