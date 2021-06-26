@@ -7,8 +7,7 @@ import datetime
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 tokyo_tz = datetime.timezone(datetime.timedelta(hours=9))
-date = datetime.datetime.now(tokyo_tz)
-hour = date.hour
+
 
 
 @bot.event
@@ -18,21 +17,9 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
     
-@bot.event
-async def on_ready():
-    # 起動したらターミナルにログイン通知が表示される
-    await ctx.send('ログインしました')
-    
-@bot.command()# 返信する非同期関数を定義
-async def reply(message):
-    reply = f'{message.author.mention} 呼んだ？' # 返信メッセージの作成
-    await message.channel.send(reply) # 返信メッセージを送信
 
-# 発言時に実行されるイベントハンドラを定義
-@bot.command()
-async def on_message(message):
-    if client.user in message.mentions: # 話しかけられたかの判定
-        await reply(message) # 返信する非同期関数を実行
+    
+
 
 @bot.command()        
 async def ping(ctx):
@@ -53,9 +40,6 @@ async def hi(ctx):
 async def 時間(ctx):
     await ctx.send('今は'+str(datetime.datetime.now(tokyo_tz))+'です。')
 #ヒントを作る    
-@bot.command()
-async def hour(ctx):
-    await ctx.send(hour)
 
 
 bot.run(token)                  
