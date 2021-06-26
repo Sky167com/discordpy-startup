@@ -1,4 +1,4 @@
-from discord.ext import commands
+from discord import commands
 import os
 import traceback
 import datetime
