@@ -7,7 +7,7 @@ import datetime
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 tokyo_tz = datetime.timezone(datetime.timedelta(hours=9))
-tokyo_time = str(datetime.datetime(tokyo_tz))
+tokyo_time = str(datetime.datetime.now(tokyo_tz))
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -37,7 +37,7 @@ async def hi(ctx):
 #一部隠す。    
 @bot.command()
 async def 時間(ctx):
-    await ctx.send('今は'+((tokyo_time.now)[:19])+'です。')
+    await ctx.send('今は'+((tokyo_time)[:19])+'です。')
 #ヒントを作る    
 
 
