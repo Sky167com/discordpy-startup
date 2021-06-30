@@ -7,7 +7,7 @@ import datetime
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 tokyo_tz = datetime.timezone(datetime.timedelta(hours=9))
-tokyo_time = (datetime.datetime.now(tokyo_tz)[:19])
+tokyo_time = (datetime.datetime.now(tokyo_tz))
 
 @bot.event
 async def on_command_error(ctx, error):
