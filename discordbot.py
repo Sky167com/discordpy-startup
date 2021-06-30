@@ -17,7 +17,7 @@ async def on_command_error(ctx, error):
 
 @bot.event
 async def on_ready():
-    await ctx.print('ログインしました。')
+    await print('ログインしました。')
     
 @bot.command()        
 async def ping(ctx):
