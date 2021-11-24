@@ -35,7 +35,7 @@ async def hi(ctx):
 
 #一部隠す。    
 @bot.command()
-async def 時間(ctx):
+async def time(ctx):
     await ctx.send('今は'+str(datetime.datetime.now(tokyo_tz))+'です。')
 #ヒントを作る    
 
