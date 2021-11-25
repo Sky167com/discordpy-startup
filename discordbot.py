@@ -21,15 +21,7 @@ async def on_command_error(ctx, error):
 async def on_ready():
     await print('ログインしました。')
 
-from time import sleep
 
-@bot.event
-async def task():
-    await ctx.send("HELOO")
-schedule.every().days.at("12:30").do(task)
-    while True:
-        schedule.run_pending()
-        sleep(1)
     
 @bot.command()        
 async def ping(ctx):
