@@ -41,6 +41,8 @@ async def hi(ctx):
 async def time(ctx):
     await ctx.send('今は'+(str(datetime.datetime.now(tokyo_tz))[:19])+'です。')
 #ヒントを作る    
-
+@bot.command()
+async def day(ctx):
+    await ctx.send('今は'+(str(datetime.datetime.now(tokyo_tz))[1:10])+'です。')
 
 bot.run(token)                  
