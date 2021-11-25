@@ -47,6 +47,6 @@ async def day(ctx):
 
 @bot.command()
 async def min(ctx):
-    await ctx.send('今は'+(str(datetime.datetime.now(tokyo_tz))[9:17])+'です。')
+    await ctx.send('今は'+(str(datetime.datetime.now(tokyo_tz))[10:19])+'です。')
 
 bot.run(token)                  
