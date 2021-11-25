@@ -3,8 +3,7 @@ import os
 import traceback
 import datetime
 import schedule
-import sleep
-from time
+
 
 
 bot = commands.Bot(command_prefix='/')
@@ -21,6 +20,8 @@ async def on_command_error(ctx, error):
 @bot.event
 async def on_ready():
     await print('ログインしました。')
+
+from time import sleep
 
 @bot.event
 async def task():
