@@ -2,6 +2,9 @@ from discord.ext import commands
 import os
 import traceback
 import datetime
+import schedule
+import sleep
+from time
 
 
 bot = commands.Bot(command_prefix='/')
@@ -18,6 +21,14 @@ async def on_command_error(ctx, error):
 @bot.event
 async def on_ready():
     await print('ログインしました。')
+
+@bot.event
+async def task():
+    await ctx.send("HELOO")
+schedule.every().days.at("12:27").do(task)
+while True:
+    schedule.run_pending()
+    sleep(1)
     
 @bot.command()        
 async def ping(ctx):
