@@ -43,10 +43,10 @@ async def time(ctx):
 #ヒントを作る    
 @bot.command()
 async def day(ctx):
-    await ctx.send('今は'+(str(datetime.datetime.now(tokyo_tz))[10:])+'です。')
+    await ctx.send('今は'+(str(datetime.datetime.now(tokyo_tz))[:10])+'です。')
 
 @bot.command()
 async def min(ctx):
-    await ctx.semd('今は'+(str(datetime.datetime.now(tokyo_tz))[9:17])+'です。')
+    await ctx.send('今は'+(str(datetime.datetime.now(tokyo_tz))[9:17])+'です。')
 
 bot.run(token)                  
